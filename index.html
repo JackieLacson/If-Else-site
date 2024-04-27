@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<center>
+    <h2>Determine if a Number is Positive or Not</h2>
+
+    <p>Enter a number:</p>
+    <input type="text" id="numberInput">
+    <button onclick="checkNumber()">Check</button>
+    <p id="result"></p>
+
+    <script>
+    function checkNumber() {
+      const userInput = document.getElementById("numberInput").value;
+
+      const number = parseFloat(userInput);
+
+      if (isNaN(number)) {
+        document.getElementById("result").innerHTML = "Invalid input. Please enter a valid number.";
+      } else {
+        if (number > 0) {
+          document.getElementById("result").innerHTML = "The number is positive.";
+        } else if (number === 0) {
+          document.getElementById("result").innerHTML = "The number is zero.";
+        } else {
+          document.getElementById("result").innerHTML = "The number is negative.";
+        }
+      }
+    }
+</script>
+</div>
+</center>
+</body>
+</html>
